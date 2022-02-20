@@ -1,7 +1,7 @@
 import { Component } from "react";
-import MarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
+import MarvelService from "../../services/MarvelService";
 
 import "./randomChar.scss";
 import mjolnir from "../../resources/img/mjolnir.png";
@@ -17,7 +17,7 @@ class RandomChar extends Component {
 
   componentDidMount() {
     this.updateChar();
-    this.timerId = setInterval(this.updateChar, 3000);
+    // this.timerId = setInterval(this.updateChar, 3000);
   }
 
   componentWillUnmount() {
