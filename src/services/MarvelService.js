@@ -32,6 +32,7 @@ class MarvelService {
   // thumbnail- we'll get path with extension
   _transformCharacter = (char) => {
     return {
+      id: char.id,
       name: char.name,
       ////!if not decription in the api(data) we will show not have description
       description: char.description
@@ -41,6 +42,7 @@ class MarvelService {
       thumbnail: char.thumbnail.path + "." + char.thumbnail.extension,
       homepage: char.urls[0].url,
       wiki: char.urls[1].url,
+      comics: char.comics.items,
     };
   };
 }
