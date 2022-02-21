@@ -17,19 +17,24 @@ class RandomChar extends Component {
 
   componentDidMount() {
     this.updateChar();
-    // this.timerId = setInterval(this.updateChar, 3000);
+    // this.timerId = setInterval(this.updateChar, 15000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerId);
+    // clearInterval(this.timerId);
   }
 
   onCharLoaded = (char) => {
-    this.setState({ char, loading: false });
+    this.setState({
+      char,
+      loading: false,
+    });
   };
 
   onCharLoading = () => {
-    this.setState({ loading: true });
+    this.setState({
+      loading: true,
+    });
   };
 
   onError = () => {
@@ -40,7 +45,6 @@ class RandomChar extends Component {
   };
 
   updateChar = () => {
-    ////! get random superHero with range
     const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
     this.onCharLoading();
     this.marvelService
@@ -51,11 +55,10 @@ class RandomChar extends Component {
 
   render() {
     const { char, loading, error } = this.state;
-
-    ////!to display correctly in turn
     const errorMessage = error ? <ErrorMessage /> : null;
     const spinner = loading ? <Spinner /> : null;
     const content = !(loading || error) ? <View char={char} /> : null;
+
     return (
       <div className="randomchar">
         {errorMessage}

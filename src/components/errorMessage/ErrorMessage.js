@@ -1,4 +1,5 @@
 import img from "./error.gif";
+
 const ErrorMessage = () => {
   return (
     <img
@@ -11,7 +12,7 @@ const ErrorMessage = () => {
       }}
       src={img}
       alt="Error"
-    ></img>
+    />
   );
 };
 
