@@ -34,6 +34,12 @@ const AppHeader = () => {
               Comics
             </NavLink>
           </li>
+          /
+          <li>
+            <Link to="auth">
+              <span>Auth</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 import AppHeader from "../appHeader/AppHeader";
 import Spinner from "../spinner/Spinner";
+import Form from "../pages/form/Form";
 // динамические компоненты должны быть после статических
 const Page404 = lazy(() => import("../pages/404"));
 const MainPage = lazy(() => import("../pages/MainPage"));
@@ -22,6 +23,7 @@ const App = () => {
               <Route path="/comics" element={<ComicsPage />} />
               <Route path="/comics/:comicId" element={<SingleComicPage />} />
               <Route path="*" element={<Page404 />} />
+              <Route path="auth" element={<Form />} />
             </Routes>
           </Suspense>
         </main>
