@@ -52,6 +52,7 @@ const CustomForms = () => {
         <ErrorMessage className="error" name="name" component="div" />
         <MyTextInput label="Ваше имя" id="name" name="name" type="text" />
 
+
         <label htmlFor="amount">Количество</label>
         <Field id="amount" name="amount" type="number" />
         <ErrorMessage className="error" name="email" component="div" />

@@ -22,6 +22,12 @@ const AppHeader = () => {
               Comics
             </NavLink>
           </li>
+          /
+          <li>
+            <NavLink activeStyle={{ color: "#9f0013" }} to="auth">
+              Form
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
